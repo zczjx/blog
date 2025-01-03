@@ -1,0 +1,292 @@
+site_name: 一只Tom的笔记本
+site_url: https://clarencezhou.github.io/clarencezhou.github.io/
+repo_url: https://github.com/zczjx/clarencezhou.github.io
+site_description: Clarence Zhou的技术笔记
+site_author: zczjx
+
+theme:
+  name: material
+  highlightjs: true
+  hljs_languages:
+    - c
+    - c++
+  features:
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.path
+    - toc.follow
+    - navigation.top
+    - content.code.copy
+    - search.highlight
+    - search.share
+
+  font:
+    text: Roboto
+    code: Source Code Pro
+     
+  palette:
+    primary: light blue
+ 
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - def_list
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      pygments_lang_class: true
+      line_spans: 
+  - pymdownx.inlinehilite
+  - pymdownx.betterem
+  - pymdownx.magiclink
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+
+  - Linux: 
+    - linux/index.md
+    - 内核剖析: 
+      - linux/kernel/index.md
+
+      - 基础知识:
+        - linux/kernel/compile.md
+        - linux/kernel/program.md
+        - linux/kernel/debug.md
+        - linux/kernel/synch.md
+        - linux/kernel/others.md
+
+      - 进程管理:
+        - linux/kernel/load.md
+        - linux/kernel/task.md
+        - linux/kernel/wait.md
+        - linux/kernel/sched.md
+        - linux/kernel/ipc.md
+        - linux/kernel/preempt.md
+        - linux/kernel/kthread.md
+
+      - 中断处理:
+        - linux/kernel/interrupt.md
+        - linux/kernel/bottom_half.md
+
+      - 内存管理:
+        - linux/kernel/mm.md
+        - linux/kernel/vma.md
+        - linux/kernel/recycle.md
+        - linux/kernel/oom.md
+        - linux/kernel/ion.md
+        - linux/kernel/cma.md
+      
+      - 文件系统:
+        - linux/kernel/vfs.md
+        - linux/kernel/block.md
+      
+      - 网络系统:
+        - linux/kernel/iomultiplexing.md
+        - linux/kernel/io_uring.md
+      
+      - 时间系统:
+        - linux/kernel/time.md
+        - linux/kernel/timer.md
+        - linux/kernel/hrtimer.md
+        - linux/kernel/rt_patch.md
+      
+      - 电源管理:
+        - linux/kernel/pm.md
+      
+      - shell脚本:
+        - linux/kernel/shell.md
+      
+      
+    
+    - 设备驱动程序:
+      - linux/drivers/index.md
+
+      - 基础知识:
+        - linux/drivers/hardware.md
+        - linux/drivers/protocol.md
+        - linux/drivers/module.md
+        - linux/drivers/dts.md
+        - linux/drivers/interrupt.md
+        - linux/drivers/dma.md
+      
+      - 设备模型框架:
+        - linux/drivers/device_model.md
+        - linux/drivers/platform.md
+      
+      - 字符、块和网络:
+        - linux/drivers/chardev.md
+        - linux/drivers/blkdev.md
+        - linux/drivers/netdev.md
+
+      - 低速设备驱动:
+        - linux/drivers/pinctrl.md
+        - linux/drivers/gpio.md
+        - linux/drivers/i2c.md
+        - linux/drivers/spi.md
+        - linux/drivers/uart.md
+        - linux/drivers/input.md
+
+      - 高速设备驱动:
+        - linux/drivers/ethernet.md
+        - linux/drivers/pcie.md
+        - linux/drivers/usb.md
+        - linux/drivers/wifi.md
+        - linux/drivers/bluetooth.md
+      
+      - 其他设备驱动:
+        - linux/drivers/socketcan.md
+            
+
+    - 性能调优:
+      - linux/optimization/index.md
+      - linux/optimization/cpu.md
+      - linux/optimization/memory.md
+      - linux/optimization/disk.md
+      - linux/optimization/network.md
+
+    - 性能观测:
+      - linux/monitor/index.md
+      - 基础知识:
+        - linux/monitor/intro.md
+      
+      - 内核跟踪技术:
+        - linux/monitor/trace.md
+        - linux/monitor/probe.md
+      
+      - ebpf:
+        - linux/monitor/ebpf.md
+        - linux/monitor/bcc.md
+        - linux/monitor/bpftrace.md
+ 
+  - ARM: 
+    - arm/index.md
+    
+    - 基础知识:
+      - arm/secure_boot.md
+      - arm/boot.md
+      - arm/aarch64.md
+      - arm/standard.md
+    
+    - ARM汇编:
+      - arm/instructions.md
+      - arm/assembler.md
+    
+    - 异常处理:
+      - arm/exception.md
+      - arm/gic.md
+    
+    - ARM同步机制:
+      - arm/atomic.md
+      - arm/lock.md
+      - arm/barrier.md
+    
+    - 内存管理:
+      - arm/mm.md
+      - arm/cache.md
+      - arm/tlb.md
+
+
+  - ROS2:
+    - ros2/index.md
+    - ros2/intro.md
+    - ros2/core.md
+
+
+  - 编程语言: 
+    - pl/index.md
+    - C:
+      - pl/c/standard.md
+      - pl/c/gcc.md
+      - pl/c/misc.md
+    
+    - C++:
+      - pl/cpp/index.md
+      - 基础知识:
+        - pl/cpp/misc.md
+        - pl/cpp/io.md
+        - pl/cpp/exception.md
+        - pl/cpp/gdb.md
+      
+      - 包管理:
+        - pl/cpp/cmake.md
+        - pl/cpp/conan.md
+      
+      - 面向对象:
+        - pl/cpp/oop.md
+      
+      - 标准库:
+        - pl/cpp/container.md
+        - pl/cpp/algorithm.md
+        - pl/cpp/regex.md
+        - pl/cpp/time.md
+      
+      - 内存管理:
+        - pl/cpp/mm.md
+      
+      - 并发:
+        - pl/cpp/concurrency.md
+      
+      - 现代C++:
+        - pl/cpp/cpp11.md
+    
+    - Python:
+      - pl/python/index.md
+
+    - Go:
+      - pl/go/index.md
+      - 基础知识:
+        - pl/go/intro.md
+        - pl/go/function.md
+        - pl/go/package.md
+        - pl/go/interface.md
+        - pl/go/concurrency.md
+        - pl/go/reflect.md
+        - pl/go/template.md
+        - pl/go/unit_test.md
+        - pl/go/debug.md
+      
+      - 标准库:
+        - pl/go/stdlib.md
+
+  - 人工智能:
+    - ai/index.md
+    - 深度学习:
+      - ai/dl/index.md
+      - ai/dl/onnx.md
+    - opencl:
+      - ai/opencl/index.md
+
+  - 云计算:
+    - cloud/index.md
+    - cloud/docker.md
+
+  - Tools: 
+    - tools/index.md
+    - tools/github.md
+    - tools/vim.md
+    - tools/markdown.md
+
+  - 其他:
+    - others/index.md
+    - others/config.md
+    - others/serializer.md
+    - others/video.md
+    - others/ffmpeg.md
+    - others/interpreter.md
